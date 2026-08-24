@@ -1,13 +1,31 @@
-# IIST COMPUTEX 2026 Site
+# IIST Exhibition Sites
 
-Static brochure replacement for the COMPUTEX 2026 booth.
+This repository contains the static sites IIST creates for exhibitions and
+events. Each event lives on its own branch so its content, assets, history, and
+deployment can evolve independently.
 
-Open `index.html` directly in a browser or upload the full `computex2026` folder to a static host.
+## Event branches
 
-The YouTube introduction link placeholder is in `assets/site.js`:
+- `computex-2026` — IIST's COMPUTEX 2026 site
 
-```js
-const YOUTUBE_URL = "TODO_YOUTUBE_URL";
+## Branch convention
+
+Use a lowercase, hyphenated event name followed by its year:
+
+```text
+<event-name>-<year>
 ```
 
-Replace `TODO_YOUTUBE_URL` with the final YouTube URL when ready.
+For example: `computex-2026`.
+
+Start a new event from `main` when building a site from scratch:
+
+```bash
+git switch main
+git pull
+git switch -c <event-name>-<year>
+```
+
+To reuse an existing event site as a starting point, create the new branch from
+that event branch instead. Keep `main` limited to this repository guide and the
+list of available event branches.
