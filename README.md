@@ -1,31 +1,35 @@
-# IIST Exhibition Sites
+# IIST SEMICON 2026 Site
 
-This repository contains the static sites IIST creates for exhibitions and
-events. Each event lives on its own branch so its content, assets, history, and
-deployment can evolve independently.
+Mobile-first exhibition site for the `semicon26` branch. The experience starts
+with the SoundLungs live demonstration, then moves from the complete system down
+through the Ankhor USB reference platform, secure IC/module integration, and
+licensable Dynamic PUF silicon IP.
 
-## Event branches
+## Audience paths
 
-- `computex-2026` — IIST's COMPUTEX 2026 site
+- IC design and IP teams evaluating a native Root-of-Trust for an SoC, secure
+  MCU, ASIC, or chiplet.
+- OEM/ODM and system integrators looking for a secure IC, module, or finished
+  key path.
+- Investors and CVC teams reviewing product proof, platform leverage, and the
+  route to high-volume licensing.
 
-## Branch convention
+## Publishing
 
-Use a lowercase, hyphenated event name followed by its year:
+The site is plain static HTML, CSS, and JavaScript. Configure GitHub Pages to
+publish the root of this branch; no build step is required.
 
-```text
-<event-name>-<year>
-```
+Open `index.html` directly or serve the repository root with any static web
+server for local review.
 
-For example: `computex-2026`.
+## Source material
 
-Start a new event from `main` when building a site from scratch:
+- `PRESENTATION_AI_BRIEF.md` defines the SoundLungs demo, technical boundaries,
+  approved standards language, and claim controls.
+- `MKT_IIST_CompanyBrochure_EN-ZH_2025-07_v1_copy.pptx` is the product and
+  company reference supplied for the project. It is source material, not a
+  public site dependency.
 
-```bash
-git switch main
-git pull
-git switch -c <event-name>-<year>
-```
-
-To reuse an existing event site as a starting point, create the new branch from
-that event branch instead. Keep `main` limited to this repository guide and the
-list of available event branches.
+Product capabilities and certification scope depend on the named product,
+configuration, and implementation. Keep published claims aligned with the
+latest IIST product documentation.

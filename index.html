@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b1c">
+  <title>IIST Dynamic PUF | SEMICON 2026</title>
+  <meta name="description" content="See IIST Dynamic PUF move from mass-production validated silicon to secure modules, USB keys, and licensable Root-of-Trust IP at SEMICON 2026.">
+  <link rel="canonical" href="https://iist-inc.github.io/exhibtion/">
+  <link rel="icon" href="assets/iist-logo.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iist-inc.github.io/exhibtion/">
+  <meta property="og:title" content="One hardware trust foundation. Any integration depth.">
+  <meta property="og:description" content="See IIST Dynamic PUF scale from mass-production validated silicon to secure modules, USB reference platforms, and licensable SoC IP at SEMICON 2026.">
+  <meta property="og:image" content="https://iist-inc.github.io/exhibtion/assets/og.png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="IIST Dynamic PUF progression from silicon IP through a secure module to a USB reference platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One hardware trust foundation. Any integration depth.">
+  <meta name="twitter:description" content="IIST Dynamic PUF from silicon IP to secure modules and USB reference platforms at SEMICON 2026.">
+  <meta name="twitter:image" content="https://iist-inc.github.io/exhibtion/assets/og.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="IIST SEMICON 2026 home">
+      <img src="assets/iist-logo.png" alt="" width="38" height="38">
+      <span>IIST</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#demo">Live demo</a>
+      <a href="#platform">Integration paths</a>
+      <a href="#technology">Dynamic PUF</a>
+      <a href="#contact">Talk to us</a>
+    </nav>
+    <a class="header-cta" href="mailto:service@iist.com.tw?subject=SEMICON%202026%20meeting">Meet at SEMICON <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> IIST at SEMICON 2026</p>
+          <h1>One hardware trust foundation.<br><em>Any integration depth.</em></h1>
+          <p class="hero-lede">Start with a USB key. Integrate a secure module. License Dynamic PUF as silicon IP for your next high-volume SoC. The same hardware-rooted trust can scale with your product.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#demo">Explore the live demo <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="#platform">Find your integration path</a>
+          </div>
+          <div class="proof-row" aria-label="Key proof points">
+            <div><strong>Mass-production</strong><span>validated silicon</span></div>
+            <div><strong>IP → product</strong><span>one technology path</span></div>
+            <div><strong>PQC ready</strong><span>crypto-agile architecture</span></div>
+          </div>
+        </div>
+
+        <div class="hero-system" aria-label="Dynamic PUF integration ladder">
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="system-card system-card-ip">
+            <span class="system-index">01</span>
+            <div><strong>Dynamic PUF IP</strong><small>Embed in SoC / MCU / chiplet</small></div>
+          </div>
+          <div class="system-connector" aria-hidden="true"><i></i></div>
+          <div class="system-card system-card-module">
+            <span class="system-index">02</span>
+            <div><strong>Secure IC &amp; module</strong><small>Integrate through standard interfaces</small></div>
+          </div>
+          <div class="system-connector" aria-hidden="true"><i></i></div>
+          <div class="system-card system-card-key">
+            <img src="assets/visual-ankhor-key.png" alt="Ankhor USB security key" width="240" height="106">
+            <div><strong>USB reference platform</strong><small>Deploy, demonstrate, and develop now</small></div>
+          </div>
+          <div class="system-core"><span>Dynamic</span><strong>PUF</strong><small>multiple roots of trust</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="demo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark"><span></span> One demo. Every trust boundary.</p>
+          <h2>Connected data.<br>Verified before AI.</h2>
+        </div>
+        <p>SoundLungs turns the complete security story into something visible: a respiratory-audio sensor must prove its device identity, establish a post-quantum protected session, and attach verifiable provenance before a Jetson processor will run AI.</p>
+      </div>
+
+      <div class="demo-stage" aria-label="SoundLungs secure data path">
+        <article class="device-card sensor-card">
+          <span class="device-type">SensePUF sensor</span>
+          <h3>Raspberry Pi</h3>
+          <p>Captures and signs the WAV.</p>
+          <div class="usb-tag"><span></span> Sensor Ankhor root</div>
+        </article>
+
+        <div class="trust-path">
+          <p class="path-label">Untrusted local network</p>
+          <ol>
+            <li><span>01</span><strong>TLS</strong><small>endpoint</small></li>
+            <li><span>02</span><strong>ML-DSA</strong><small>identity</small></li>
+            <li><span>03</span><strong>ML-KEM</strong><small>session</small></li>
+            <li><span>04</span><strong>AES-GCM</strong><small>payload</small></li>
+            <li><span>05</span><strong>C2PA</strong><small>provenance</small></li>
+          </ol>
+          <div class="data-line"><i></i></div>
+        </div>
+
+        <article class="device-card processor-card">
+          <span class="device-type">AI processor</span>
+          <h3>NVIDIA Jetson</h3>
+          <p>Verifies every proof, then infers.</p>
+          <div class="usb-tag"><span></span> Processor Ankhor root</div>
+          <div class="ai-gate"><b>AI gate</b><strong>UNLOCKS LAST</strong></div>
+        </article>
+      </div>
+
+      <div class="demo-footer">
+        <p><strong>The policy is simple:</strong> if identity, session, payload, or provenance fails, AI stays locked.</p>
+        <a href="#workflow">See every verification gate <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="platform-section" id="platform">
+      <div class="section-heading platform-heading">
+        <div>
+          <p class="eyebrow dark"><span></span> One technology · three integration paths</p>
+          <h2>Choose what fits today.<br>Scale when volume demands it.</h2>
+        </div>
+        <p>IIST lets teams prove the architecture with working hardware before committing it to silicon. Move from a deployable key or module to a custom SoC without changing the core trust model.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card product-ip">
+          <div class="product-number">01 / SILICON IP</div>
+          <div class="product-visual chip-visual">
+            <img src="assets/visual-chip.jpg" alt="IIST Dynamic PUF silicon test device" width="768" height="1024">
+            <span>Highest integration</span>
+          </div>
+          <div class="product-copy">
+            <h3>Dynamic PUF IP</h3>
+            <p>Build native hardware roots of trust into an ASIC, SoC, secure MCU, or chiplet—without relying on permanently stored master keys.</p>
+            <ul>
+              <li>Logic-based, process-portable PUF architecture</li>
+              <li>Multiple isolated roots from one entropy source</li>
+              <li>Identity, root-key recovery, and true-random entropy</li>
+            </ul>
+            <span class="best-for">Best for · high volume, low BoM, maximum control</span>
+          </div>
+        </article>
+
+        <article class="product-card product-module">
+          <div class="product-number">02 / SECURE IC &amp; MODULE</div>
+          <div class="product-visual module-visual">
+            <img src="assets/visual-module.jpg" alt="IIST secure module with Dynamic PUF" width="750" height="480">
+            <span>Fast integration</span>
+          </div>
+          <div class="product-copy">
+            <h3>Secure IC &amp; module</h3>
+            <p>Add a hardware security anchor to an existing design through standard host interfaces, while keeping protected operations independent from the main processor.</p>
+            <ul>
+              <li>Production silicon and ready-to-integrate module paths</li>
+              <li>Hardware-rooted device identity and key domains</li>
+              <li>Practical bridge to future custom silicon</li>
+            </ul>
+            <span class="best-for">Best for · new products, retrofits, faster qualification</span>
+          </div>
+        </article>
+
+        <article class="product-card product-key">
+          <div class="product-number">03 / USB REFERENCE PLATFORM</div>
+          <div class="product-visual key-visual">
+            <img src="assets/visual-ankhor-key.png" alt="IIST Ankhor USB security key" width="750" height="330">
+            <span>Deploy now</span>
+          </div>
+          <div class="product-copy">
+            <h3>Ankhor USB key</h3>
+            <p>Evaluate Dynamic PUF with a finished device that makes identity, protected signing, passkey access, PQC workflows, and content provenance tangible.</p>
+            <ul>
+              <li>Finished hardware for demos and software development</li>
+              <li>FIDO2 access and hardware-bound operations</li>
+              <li>Reference integration for PQC and C2PA workflows</li>
+            </ul>
+            <span class="best-for">Best for · evaluation, deployment, reference design</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="scale-rail" aria-label="Product scaling path">
+        <div><span>Evaluate</span><strong>USB key</strong><small>Working proof in days</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>Integrate</span><strong>Secure IC / module</strong><small>Product path without a new ASIC</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>Scale</span><strong>Licensable IP</strong><small>Optimize cost, power, and control</small></div>
+      </div>
+    </section>
+
+    <section class="technology-section" id="technology">
+      <div class="technology-grid">
+        <div class="technology-copy">
+          <p class="eyebrow"><span></span> Why Dynamic PUF</p>
+          <h2>A root of trust that is not limited to one root.</h2>
+          <p class="technology-lede">Microscopic manufacturing variation creates a device-specific physical entropy source. IIST combines that source with Attestation Curve Cryptography to reconstruct independent cryptographic roots on demand—then uses the same physical foundation for true-random entropy.</p>
+          <div class="technology-facts">
+            <div><strong>Many</strong><span>isolated trust domains from one physical source</span></div>
+            <div><strong>~200 B</strong><span>checkpoint data per recoverable root key</span></div>
+            <div><strong>Logic</strong><span>architecture portable across nodes and foundries</span></div>
+            <div><strong>On demand</strong><span>key recovery and entropy reseeding</span></div>
+          </div>
+          <p class="fine-print">Architecture and performance figures depend on the selected implementation and target process.</p>
+        </div>
+
+        <div class="root-map" aria-label="One Dynamic PUF entropy source supports multiple independent roots of trust and true-random entropy">
+          <div class="root-source">
+            <span>Physical entropy</span>
+            <strong>Dynamic PUF</strong>
+            <small>+ ACC recovery</small>
+          </div>
+          <div class="root-line line-1" aria-hidden="true"></div>
+          <div class="root-line line-2" aria-hidden="true"></div>
+          <div class="root-line line-3" aria-hidden="true"></div>
+          <div class="root-line line-4" aria-hidden="true"></div>
+          <div class="root-node node-boot"><span>Root 01</span><strong>Boot &amp; firmware</strong></div>
+          <div class="root-node node-maintenance"><span>Root 02</span><strong>Maintenance</strong></div>
+          <div class="root-node node-oem"><span>Root 03</span><strong>OEM / ODM</strong></div>
+          <div class="root-node node-app"><span>Root n</span><strong>Applications</strong></div>
+          <div class="entropy-node"><span>Fresh entropy</span><strong>TRNG / DRBG reseed</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section" id="proof">
+      <div class="section-heading proof-heading">
+        <div>
+          <p class="eyebrow dark"><span></span> Evidence from silicon to system</p>
+          <h2>Reduce technical risk before a custom tape-out.</h2>
+        </div>
+        <p>This is not an IP-only promise. IIST has carried Dynamic PUF through silicon, a secure IC, an embedded module, a finished security key, and complete reference workflows.</p>
+      </div>
+
+      <figure class="product-family-figure">
+        <img src="assets/visual-products.png" alt="IIST product progression from PUF silicon through secure engine and module to Ankhor USB key" width="1792" height="1024">
+      </figure>
+
+      <div class="proof-grid">
+        <article>
+          <span class="proof-mark">01</span>
+          <h3>Production proof</h3>
+          <p>Mass-production validated PUF silicon and a secure IC implementation on a mature TSMC 0.18 μm process.</p>
+        </article>
+        <article>
+          <span class="proof-mark">02</span>
+          <h3>Product proof</h3>
+          <p>Secure IC, module, and finished USB key form factors show a practical path from embedded integration to deployment.</p>
+        </article>
+        <article>
+          <span class="proof-mark">03</span>
+          <h3>Standards proof</h3>
+          <p>Named product configurations include SESIP-certified secure silicon and a FIDO2-certified key path. Certification scope does not automatically transfer to every integration.</p>
+        </article>
+        <article>
+          <span class="proof-mark">04</span>
+          <h3>System proof</h3>
+          <p>The SoundLungs reference platform combines hardware-protected identity and key operations with host software for PQC, FIDO2, C2PA, encrypted transport, and fail-closed AI policy.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow-section" id="workflow">
+      <div class="workflow-intro">
+        <p class="eyebrow"><span></span> SoundLungs verification sequence</p>
+        <h2>AI is the last step—not the first assumption.</h2>
+        <p>Each mechanism answers a different question. The connection, user, action, device, session, data, and provenance are verified at separate boundaries.</p>
+      </div>
+
+      <ol class="workflow-list">
+        <li><span>01</span><div><strong>FIDO2 / WebAuthn</strong><small>Who may enter?</small></div></li>
+        <li><span>02</span><div><strong>Operator proof</strong><small>Who may control?</small></div></li>
+        <li><span>03</span><div><strong>TLS certificate</strong><small>Which endpoint?</small></div></li>
+        <li><span>04</span><div><strong>ML-DSA-65</strong><small>Which enrolled devices?</small></div></li>
+        <li><span>05</span><div><strong>ML-KEM-768</strong><small>Which fresh session?</small></div></li>
+        <li><span>06</span><div><strong>AES-256-GCM</strong><small>Is transport authentic?</small></div></li>
+        <li><span>07</span><div><strong>C2PA</strong><small>Which signer and bytes?</small></div></li>
+        <li class="workflow-ai"><span>08</span><div><strong>AI inference</strong><small>Only after every proof passes</small></div></li>
+      </ol>
+
+      <div class="implementation-note">
+        <div>
+          <span class="note-label">Inside the hardware roots</span>
+          <p>Pinned device identity, PUF-derived roots, and protected cryptographic operations—including the demo’s signing and post-quantum key operations.</p>
+        </div>
+        <div>
+          <span class="note-label">Implemented at system level</span>
+          <p>TLS, bulk AES-256-GCM streaming, C2PA packaging and policy verification, browser UX, orchestration, and the AI admission gate.</p>
+        </div>
+        <p class="implementation-summary">The split is intentional: it demonstrates how hardware trust becomes a complete product workflow. A silicon or module integration can move and optimize functions according to volume, performance, certification, and threat-model needs.</p>
+      </div>
+    </section>
+
+    <section class="audience-section" id="audiences">
+      <div class="audience-intro">
+        <p class="eyebrow dark"><span></span> Find what matters to you</p>
+        <h2>Three conversations.<br>One scalable platform.</h2>
+      </div>
+
+      <div class="audience-tabs" role="tablist" aria-label="Audience perspectives">
+        <button id="tab-ic" type="button" role="tab" aria-selected="true" aria-controls="panel-ic" data-audience-tab="ic">IC design &amp; IP</button>
+        <button id="tab-oem" type="button" role="tab" aria-selected="false" aria-controls="panel-oem" data-audience-tab="oem" tabindex="-1">OEM / ODM &amp; integrators</button>
+        <button id="tab-investor" type="button" role="tab" aria-selected="false" aria-controls="panel-investor" data-audience-tab="investor" tabindex="-1">Investors &amp; CVC</button>
+      </div>
+
+      <div class="audience-panels">
+        <article id="panel-ic" class="audience-panel active" role="tabpanel" aria-labelledby="tab-ic" data-audience-panel="ic">
+          <div class="panel-head">
+            <span>For semiconductor architects</span>
+            <h3>Put a reusable physical trust primitive inside your SoC.</h3>
+            <p>License the Dynamic PUF alone or combine it with selected cryptographic primitives and a security engine to create a customer-specific Root-of-Trust platform.</p>
+          </div>
+          <div class="panel-columns">
+            <div><strong>Architecture value</strong><ul><li>Multiple independent security domains</li><li>No permanently stored root keys</li><li>SoC, secure MCU, ASIC, and chiplet paths</li></ul></div>
+            <div><strong>Bring to the meeting</strong><ul><li>Target node and foundry</li><li>Bus, memory, area, and power constraints</li><li>Lifecycle, provisioning, and PQC roadmap</li></ul></div>
+          </div>
+          <a class="text-link" href="mailto:service@iist.com.tw?subject=SEMICON%202026%20Dynamic%20PUF%20IP%20discussion">Start a confidential IP discussion <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="panel-oem" class="audience-panel" role="tabpanel" aria-labelledby="tab-oem" data-audience-panel="oem" hidden>
+          <div class="panel-head">
+            <span>For product and platform teams</span>
+            <h3>Add hardware trust now—without redesigning the host SoC.</h3>
+            <p>Use a secure IC, module, or USB key to validate device identity, trusted operations, secure access, and provenance. Move toward IP when scale and integration justify it.</p>
+          </div>
+          <div class="panel-columns">
+            <div><strong>Integration value</strong><ul><li>Standard host-interface options</li><li>Host-independent security anchor</li><li>Reference software and live workflows</li></ul></div>
+            <div><strong>Bring to the meeting</strong><ul><li>Product class and target volume</li><li>Available interfaces and host OS</li><li>Identity, update, access, or data-trust goal</li></ul></div>
+          </div>
+          <a class="text-link" href="mailto:service@iist.com.tw?subject=SEMICON%202026%20OEM%20integration%20discussion">Map trust into your product <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="panel-investor" class="audience-panel" role="tabpanel" aria-labelledby="tab-investor" data-audience-panel="investor" hidden>
+          <div class="panel-head">
+            <span>For strategic and financial investors</span>
+            <h3>One core technology, monetized across the semiconductor value chain.</h3>
+            <p>IIST can create near-term product revenue with keys, modules, and secure silicon while building higher-volume, higher-leverage licensing opportunities in SoCs and chiplets.</p>
+          </div>
+          <div class="panel-columns">
+            <div><strong>Platform leverage</strong><ul><li>IP, silicon, module, and finished-product offers</li><li>Working reference applications shorten customer discovery</li><li>PQC and regulation increase hardware-trust urgency</li></ul></div>
+            <div><strong>Diligence themes</strong><ul><li>Silicon validation and product readiness</li><li>Portability and integration economics</li><li>Design-win and licensing pipeline</li></ul></div>
+          </div>
+          <a class="text-link" href="mailto:service@iist.com.tw?subject=SEMICON%202026%20investor%20discussion">Request the investor overview <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="standards-section" id="standards">
+      <div class="standards-heading">
+        <p class="eyebrow dark"><span></span> What each technology does</p>
+        <h2>Precise roles. No magic words.</h2>
+        <p>The value is not a list of acronyms. It is the way distinct mechanisms combine into one verifiable security architecture.</p>
+      </div>
+      <div class="standards-grid">
+        <article><span>PUF</span><h3>Create hardware roots</h3><p>Device-specific physical entropy supports root-key recovery, identity, and true-random seed generation.</p></article>
+        <article><span>PQC</span><h3>Protect the next session</h3><p>ML-DSA-65 authenticates the demo handshake; ML-KEM-768 establishes fresh Category 3 session material in addition to TLS.</p></article>
+        <article><span>FIDO2</span><h3>Authenticate the user</h3><p>WebAuthn passkeys enable phishing-resistant access. The demo adds a separate hardware-bound proof for operator actions.</p></article>
+        <article><span>C2PA</span><h3>Verify provenance</h3><p>A Content Credential binds the authorized sensor and session to the exact audio bytes. It proves provenance—not factual truth.</p></article>
+        <article><span>ZERO TRUST</span><h3>Verify every boundary</h3><p>Network presence grants nothing. User, action, endpoint, session, payload, provenance, and AI policy are checked separately.</p></article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-heading">
+        <p class="eyebrow dark"><span></span> Technical buyer FAQ</p>
+        <h2>Questions worth asking at the booth.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What changes between the USB key, module, and silicon IP?<span>+</span></summary>
+          <p>The physical trust concept remains consistent; packaging, host interface, performance, certification boundary, software split, BoM, and ownership change. The USB key is fastest to evaluate, a module is easier to integrate into an existing design, and IP gives the most control at volume.</p>
+        </details>
+        <details>
+          <summary>Are PQC, FIDO2, and C2PA all implemented entirely in hardware?<span>+</span></summary>
+          <p>No. The reference platform protects device identity and selected cryptographic operations in hardware, while the host software implements orchestration, bulk data handling, protocol packaging, verification policy, and UX. The split can be redesigned for a customer SoC or secure platform.</p>
+        </details>
+        <details>
+          <summary>Why generate multiple roots instead of deriving everything from one master key?<span>+</span></summary>
+          <p>Independent roots reduce cross-domain dependency. Boot, firmware, maintenance, OEM/ODM, and applications can be isolated and governed separately rather than sharing one stored master secret and one failure domain.</p>
+        </details>
+        <details>
+          <summary>What does C2PA prove in the SoundLungs demo?<span>+</span></summary>
+          <p>It provides tamper-evident provenance under a configured trust policy: who signed, which bytes were signed, and whether the recording belongs to the live session. It does not prove that the content is factually or clinically true.</p>
+        </details>
+        <details>
+          <summary>Which certification claims apply?<span>+</span></summary>
+          <p>Certification applies to the specific named product and configuration in scope. It does not automatically transfer from a secure IC or key to a customer’s module, system, or IP integration. Ask IIST for the current certificate, version, and evaluation boundary relevant to your project.</p>
+        </details>
+        <details>
+          <summary>Is SoundLungs a medical product?<span>+</span></summary>
+          <p>No. It is an engineering exhibition demonstrator that uses respiratory audio to make the secure data path and AI admission policy visible. It makes no diagnostic, clinical-performance, or medical-device claim.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow"><span></span> Continue the conversation</p>
+        <h2>Bring one architecture.<br>Leave with a trust path.</h2>
+        <p>Tell us where your product is today—existing host, module design, secure IC, or new SoC—and what must be trusted. We will map the shortest path from working proof to volume integration.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:service@iist.com.tw?subject=SEMICON%202026%20technical%20meeting">Book a SEMICON discussion <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="https://www.iist-site.com" target="_blank" rel="noopener noreferrer">Visit iist-site.com</a>
+        </div>
+      </div>
+      <aside class="meeting-card">
+        <span>To make 20 minutes useful</span>
+        <h3>Bring these four inputs</h3>
+        <ol>
+          <li><b>01</b><p><strong>Target platform</strong><small>SoC, MCU, FPGA, module, or finished device</small></p></li>
+          <li><b>02</b><p><strong>Integration limits</strong><small>Node, interface, memory, power, area, and BoM</small></p></li>
+          <li><b>03</b><p><strong>Trust objective</strong><small>Identity, boot, update, access, data, or lifecycle</small></p></li>
+          <li><b>04</b><p><strong>Volume and timing</strong><small>Evaluation, design-in, qualification, and production</small></p></li>
+        </ol>
+      </aside>
+    </section>
+  </main>
+
+  <nav class="mobile-dock" aria-label="Quick navigation">
+    <a href="#demo"><span>01</span>Demo</a>
+    <a href="#platform"><span>02</span>IP to key</a>
+    <a href="#audiences"><span>03</span>For you</a>
+    <a href="#contact"><span>04</span>Contact</a>
+  </nav>
+
+  <footer class="site-footer">
+    <div>
+      <span>IIST · Intelligent Information Security Technology Inc.</span>
+      <small>Hardware trust from silicon to system.</small>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:service@iist.com.tw">service@iist.com.tw</a>
+      <a href="https://www.iist-site.com" target="_blank" rel="noopener noreferrer">iist-site.com</a>
+    </div>
+    <p>Product capabilities and certification scope depend on the named configuration and implementation.</p>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
