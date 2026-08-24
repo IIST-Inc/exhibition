@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
+  <title>Dynamic PUF Technology | IIST SEMICON 2026</title>
+  <meta name="description" content="Learn how IIST Dynamic PUF creates multiple hardware roots of trust and true-random entropy from one physical source.">
+  <link rel="canonical" href="https://iist-inc.github.io/exhibtion/pages/technology.html"><link rel="icon" href="../assets/iist-logo.png" type="image/png"><link rel="stylesheet" href="../assets/mobile.css">
+  <meta property="og:type" content="website"><meta property="og:title" content="IIST Dynamic PUF technology"><meta property="og:description" content="Multiple independent roots of trust from one physics-based entropy source.">
+</head>
+<body data-page="technology">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-bar">
+    <a class="brand" href="../index.html" aria-label="IIST SEMICON 2026 home"><img src="../assets/iist-logo.png" alt="" width="35" height="35"><span>IIST<small data-i18n="brand.event">SEMICON 2026 · Hardware trust</small></span></a>
+    <nav class="desktop-menu" aria-label="Primary navigation"><a href="../index.html" data-i18n="nav.home">Home</a><a href="demo.html" data-i18n="nav.demo">Demo</a><a href="products.html" data-i18n="nav.products">Products</a><a href="technology.html" aria-current="page" data-i18n="nav.technology">Technology</a><a href="use-cases.html" data-i18n="nav.usecases">Use cases</a></nav>
+    <div class="language-control"><label class="visually-hidden" for="language">Choose language</label><select id="language" data-language-select aria-label="Choose language"><option value="en">EN</option><option value="zh-Hant">繁中</option><option value="ja">日本語</option></select></div>
+  </header>
+
+  <main class="app-main" id="main">
+    <header class="screen-head">
+      <a class="back-link" href="../index.html"><span aria-hidden="true">←</span><span data-i18n="common.menu">Back to menu</span></a>
+      <p class="screen-kicker" data-i18n="tech.kicker">Technology · Dynamic PUF</p>
+      <h1 data-i18n="tech.title">More than a device fingerprint.</h1>
+      <p data-i18n="tech.intro">IIST uses microscopic manufacturing variation as a physical entropy source, then applies Attestation Curve Cryptography to recover independent roots of trust on demand.</p>
+    </header>
+
+    <section class="concept-grid">
+      <article class="concept-card"><span>01</span><h2 data-i18n="tech.c1Title">Physical entropy</h2><p data-i18n="tech.c1Body">Logic cells capture device-specific manufacturing variation.</p></article>
+      <article class="concept-card"><span>02</span><h2 data-i18n="tech.c2Title">ACC recovery</h2><p data-i18n="tech.c2Body">Checkpoint data lets the device attest and reconstruct the intended root.</p></article>
+      <article class="concept-card"><span>03</span><h2 data-i18n="tech.c3Title">Multiple roots</h2><p data-i18n="tech.c3Body">Boot, maintenance, OEM, and applications can use isolated roots.</p></article>
+      <article class="concept-card"><span>04</span><h2 data-i18n="tech.c4Title">Fresh randomness</h2><p data-i18n="tech.c4Body">The same entropy source supports true-random generation and reseeding.</p></article>
+    </section>
+
+    <section class="screen-section">
+      <div class="screen-section-head"><h2 data-i18n="tech.rootsTitle">One physical source, many trust domains</h2><p data-i18n="tech.rootsIntro">Independent roots reduce dependency on one stored master secret.</p></div>
+      <div class="root-diagram" aria-label="Dynamic PUF supports multiple trust domains">
+        <div class="root-core"><span data-i18n="tech.coreLabel">Physical entropy</span><strong>Dynamic PUF</strong></div>
+        <div class="root-branches"><div data-i18n="tech.root1">Boot & firmware</div><div data-i18n="tech.root2">Maintenance</div><div data-i18n="tech.root3">OEM / ODM</div><div data-i18n="tech.root4">Applications</div><div data-i18n="tech.root5">Device identity</div><div data-i18n="tech.root6">TRNG / reseed</div></div>
+      </div>
+    </section>
+
+    <section class="screen-section">
+      <div class="screen-section-head"><h2 data-i18n="tech.detailTitle">Tap for design detail</h2><p data-i18n="tech.detailIntro">Open the question relevant to your architecture.</p></div>
+      <div class="disclosure-list">
+        <details><summary><span data-i18n="tech.detail1Title">Are root keys stored permanently?</span><b>+</b></summary><p data-i18n="tech.detail1Body">The Dynamic PUF design recovers associated root material from physics and checkpoint data rather than keeping the root key permanently in NVM.</p></details>
+        <details><summary><span data-i18n="tech.detail2Title">How much checkpoint data is needed?</span><b>+</b></summary><p data-i18n="tech.detail2Body">The current product description uses approximately 200 bytes of checkpoint data per recoverable root. Exact implementation figures depend on the target.</p></details>
+        <details><summary><span data-i18n="tech.detail3Title">Can the PUF move to another process?</span><b>+</b></summary><p data-i18n="tech.detail3Body">The logic-based PUF cells are redesigned and validated for the target node and foundry. The ACC method remains process independent.</p></details>
+        <details><summary><span data-i18n="tech.detail4Title">What completes a full Root of Trust?</span><b>+</b></summary><p data-i18n="tech.detail4Body">IIST can combine Dynamic PUF with cryptographic primitives, key management, lifecycle control, secure boot, update, and other security-engine functions.</p></details>
+      </div>
+    </section>
+
+    <a class="email-button" href="mailto:service@iist.com.tw?subject=SEMICON%202026%20-%20Dynamic%20PUF%20technical%20discussion"><span data-i18n="tech.cta">Start a Dynamic PUF architecture discussion</span><b aria-hidden="true">↗</b></a>
+    <a class="next-row" href="use-cases.html"><span><span data-i18n="common.next">Next</span><strong data-i18n="tech.next">Explore where the technology can be used</strong></span><b aria-hidden="true">→</b></a>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><div><strong>IIST · Intelligent Information Security Technology Inc.</strong><span data-i18n="footer.tagline">Hardware trust from silicon to system.</span></div><div class="footer-links"><a href="mailto:service@iist.com.tw">service@iist.com.tw</a><a href="sources.html" data-i18n="nav.sources">Official sources</a></div><small data-i18n="footer.note">Product capabilities and certification scope depend on the named configuration and implementation.</small></div></footer>
+  <nav class="app-nav" aria-label="App navigation"><a href="../index.html"><b>⌂</b><span data-i18n="nav.home">Home</span></a><a href="demo.html"><b>▶</b><span data-i18n="nav.demo">Demo</span></a><a href="products.html"><b>▦</b><span data-i18n="nav.products">Products</span></a><a href="mailto:service@iist.com.tw?subject=SEMICON%202026%20follow-up"><b>@</b><span data-i18n="nav.contact">Contact</span></a></nav>
+  <script src="../assets/mobile.js"></script>
+</body>
+</html>

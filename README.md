@@ -1,35 +1,33 @@
-# IIST SEMICON 2026 Site
+# IIST SEMICON 2026 Mobile Guide
 
-Mobile-first exhibition site for the `semicon26` branch. The experience starts
-with the SoundLungs live demonstration, then moves from the complete system down
-through the Ankhor USB reference platform, secure IC/module integration, and
-licensable Dynamic PUF silicon IP.
+A multilingual, mobile-first exhibition guide for the `semicon26` branch.
+The interface behaves like a lightweight phone application: visitors land on a
+grid menu, choose a focused topic, keep persistent bottom navigation, and can
+open a prepared email to IIST from any screen.
 
-## Audience paths
+## Screens
 
-- IC design and IP teams evaluating a native Root-of-Trust for an SoC, secure
-  MCU, ASIC, or chiplet.
-- OEM/ODM and system integrators looking for a secure IC, module, or finished
-  key path.
-- Investors and CVC teams reviewing product proof, platform leverage, and the
-  route to high-volume licensing.
+- `index.html` — app dashboard, language selection, and email shortcuts
+- `pages/demo.html` — SoundLungs live-demo flow
+- `pages/products.html` — USB key, secure IC/module, and IP paths
+- `pages/technology.html` — Dynamic PUF and multiple roots of trust
+- `pages/use-cases.html` — semiconductor, embedded, access, PQC, and C2PA uses
+- `pages/audiences.html` — IC design, OEM/ODM/integrator, and investor paths
+- `pages/sources.html` — official NIST, FIDO Alliance, W3C, and C2PA links
+
+## Languages
+
+English, Traditional Chinese, and Japanese are selected from the app header or
+the dashboard. The choice is stored in the visitor's browser and reused across
+all screens.
 
 ## Publishing
 
 The site is plain static HTML, CSS, and JavaScript. Configure GitHub Pages to
-publish the root of this branch; no build step is required.
+publish the root of the `semicon26` branch; no build step is required.
 
-Open `index.html` directly or serve the repository root with any static web
-server for local review.
+## Claim controls
 
-## Source material
-
-- `PRESENTATION_AI_BRIEF.md` defines the SoundLungs demo, technical boundaries,
-  approved standards language, and claim controls.
-- `MKT_IIST_CompanyBrochure_EN-ZH_2025-07_v1_copy.pptx` is the product and
-  company reference supplied for the project. It is source material, not a
-  public site dependency.
-
-Product capabilities and certification scope depend on the named product,
-configuration, and implementation. Keep published claims aligned with the
-latest IIST product documentation.
+`PRESENTATION_AI_BRIEF.md` remains the source of truth for the SoundLungs demo,
+standards language, implementation boundaries, and prohibited claims. Product
+capabilities and certification scope depend on the named configuration.

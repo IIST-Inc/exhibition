@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
+  <title>SoundLungs Live Demo | IIST SEMICON 2026</title>
+  <meta name="description" content="Learn how SoundLungs verifies hardware identity, PQC, encryption, and C2PA provenance before AI inference.">
+  <link rel="canonical" href="https://iist-inc.github.io/exhibtion/pages/demo.html"><link rel="icon" href="../assets/iist-logo.png" type="image/png"><link rel="stylesheet" href="../assets/mobile.css">
+  <meta property="og:type" content="website"><meta property="og:title" content="SoundLungs · Verified before AI"><meta property="og:description" content="The IIST live demonstration connects Dynamic PUF, PQC, FIDO2, C2PA, and fail-closed AI policy.">
+</head>
+<body data-page="demo">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-bar">
+    <a class="brand" href="../index.html" aria-label="IIST SEMICON 2026 home"><img src="../assets/iist-logo.png" alt="" width="35" height="35"><span>IIST<small data-i18n="brand.event">SEMICON 2026 · Hardware trust</small></span></a>
+    <nav class="desktop-menu" aria-label="Primary navigation"><a href="../index.html" data-i18n="nav.home">Home</a><a href="demo.html" aria-current="page" data-i18n="nav.demo">Demo</a><a href="products.html" data-i18n="nav.products">Products</a><a href="technology.html" data-i18n="nav.technology">Technology</a><a href="use-cases.html" data-i18n="nav.usecases">Use cases</a></nav>
+    <div class="language-control"><label class="visually-hidden" for="language">Choose language</label><select id="language" data-language-select aria-label="Choose language"><option value="en">EN</option><option value="zh-Hant">繁中</option><option value="ja">日本語</option></select></div>
+  </header>
+
+  <main class="app-main" id="main">
+    <header class="screen-head">
+      <a class="back-link" href="../index.html"><span aria-hidden="true">←</span><span data-i18n="common.menu">Back to menu</span></a>
+      <p class="screen-kicker" data-i18n="demo.kicker">Live demo · SoundLungs</p>
+      <h1 data-i18n="demo.title">Connected data. Verified before AI.</h1>
+      <p data-i18n="demo.intro">A Raspberry Pi sensor and NVIDIA Jetson each use an Ankhor hardware root. The Jetson analyzes a recording only after every required identity, session, encryption, and provenance check passes.</p>
+    </header>
+
+    <section class="summary-card accent">
+      <h2 data-i18n="demo.summaryTitle">One visible policy</h2>
+      <p data-i18n="demo.summaryBody">If the hardware root is absent, the enrolled identity is different, the session proof fails, or the signed bytes do not match, AI stays locked.</p>
+      <div class="chip-row" aria-label="Demo technologies"><span class="chip">Dynamic PUF</span><span class="chip">FIDO2</span><span class="chip">ML-DSA</span><span class="chip">ML-KEM</span><span class="chip">AES-GCM</span><span class="chip">C2PA</span></div>
+    </section>
+
+    <section class="screen-section">
+      <div class="screen-section-head"><h2 data-i18n="demo.flowTitle">What happens</h2><p data-i18n="demo.flowIntro">Five short stages tell the complete story.</p></div>
+      <div class="flow-list">
+        <article class="flow-item"><span>01</span><div><strong data-i18n="demo.flow1Title">Authenticate the person</strong><small data-i18n="demo.flow1Body">FIDO2/WebAuthn passkeys allow viewers in. A separate one-use Ankhor proof authorizes operator actions.</small></div></article>
+        <article class="flow-item"><span>02</span><div><strong data-i18n="demo.flow2Title">Authenticate both devices</strong><small data-i18n="demo.flow2Body">TLS checks the endpoint. Pinned UIDs and ML-DSA-65 proofs must match the enrolled sensor and processor.</small></div></article>
+        <article class="flow-item"><span>03</span><div><strong data-i18n="demo.flow3Title">Create a fresh PQC session</strong><small data-i18n="demo.flow3Body">ML-KEM-768 establishes fresh Category 3 session material in addition to TLS.</small></div></article>
+        <article class="flow-item"><span>04</span><div><strong data-i18n="demo.flow4Title">Protect and sign the recording</strong><small data-i18n="demo.flow4Body">AES-256-GCM protects the WAV in transit. The sensor binds a C2PA Content Credential to the exact file and session.</small></div></article>
+        <article class="flow-item final"><span>05</span><div><strong data-i18n="demo.flow5Title">Unlock AI last</strong><small data-i18n="demo.flow5Body">The Jetson decrypts, validates the signer, bytes, sensor, and session, then allows inference.</small></div></article>
+      </div>
+    </section>
+
+    <section class="screen-section">
+      <div class="screen-section-head"><h2 data-i18n="demo.detailsTitle">Tap for technical detail</h2><p data-i18n="demo.detailsIntro">Keep the main story short; open only the layer you need.</p></div>
+      <div class="disclosure-list">
+        <details><summary><span data-i18n="demo.detail1Title">Three different hardware-key roles</span><b>+</b></summary><p data-i18n="demo.detail1Body">The sensor key proves the Raspberry Pi identity, the processor key proves the Jetson identity, and a third browser-connected key authorizes operator actions. These roles are not interchangeable.</p></details>
+        <details><summary><span data-i18n="demo.detail2Title">What is inside hardware?</span><b>+</b></summary><p data-i18n="demo.detail2Body">PUF-derived roots, pinned device identity, and selected protected signing and post-quantum key operations. The exact boundary depends on the product configuration.</p></details>
+        <details><summary><span data-i18n="demo.detail3Title">What remains at system level?</span><b>+</b></summary><p data-i18n="demo.detail3Body">TLS, bulk AES streaming, C2PA packaging and policy verification, the browser interface, orchestration, and the AI admission policy.</p></details>
+        <details><summary><span data-i18n="demo.detail4Title">What does C2PA prove?</span><b>+</b></summary><p data-i18n="demo.detail4Body">It provides verifiable, tamper-evident provenance under a chosen trust policy. It does not prove that the recording is factually or clinically true.</p></details>
+      </div>
+    </section>
+
+    <p class="callout warn" data-i18n="demo.disclaimer">SoundLungs is an engineering exhibition demonstrator, not a medical device. It makes no diagnostic or clinical-performance claim.</p>
+
+    <a class="next-row" href="products.html"><span><span data-i18n="common.next">Next</span><strong data-i18n="demo.next">Compare the product forms behind the demo</strong></span><b aria-hidden="true">→</b></a>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><div><strong>IIST · Intelligent Information Security Technology Inc.</strong><span data-i18n="footer.tagline">Hardware trust from silicon to system.</span></div><div class="footer-links"><a href="mailto:service@iist.com.tw">service@iist.com.tw</a><a href="sources.html" data-i18n="nav.sources">Official sources</a></div><small data-i18n="footer.note">Product capabilities and certification scope depend on the named configuration and implementation.</small></div></footer>
+  <nav class="app-nav" aria-label="App navigation"><a href="../index.html"><b>⌂</b><span data-i18n="nav.home">Home</span></a><a href="demo.html" aria-current="page"><b>▶</b><span data-i18n="nav.demo">Demo</span></a><a href="products.html"><b>▦</b><span data-i18n="nav.products">Products</span></a><a href="mailto:service@iist.com.tw?subject=SEMICON%202026%20follow-up"><b>@</b><span data-i18n="nav.contact">Contact</span></a></nav>
+  <script src="../assets/mobile.js"></script>
+</body>
+</html>
