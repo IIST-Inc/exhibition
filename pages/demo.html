@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
   <title>SoundLungs Live Demo | IIST SEMICON 2026</title>
   <meta name="description" content="Learn how SoundLungs verifies hardware identity, PQC, encryption, and C2PA provenance before AI inference.">
-  <link rel="canonical" href="https://iist-inc.github.io/exhibtion/pages/demo.html"><link rel="icon" href="../assets/iist-logo.png" type="image/png"><link rel="stylesheet" href="../assets/mobile.css">
+  <link rel="canonical" href="https://iist-inc.github.io/exhibition/pages/demo.html"><link rel="icon" href="../assets/iist-logo.png" type="image/png"><link rel="stylesheet" href="../assets/mobile.css">
   <meta property="og:type" content="website"><meta property="og:title" content="SoundLungs · Verified before AI"><meta property="og:description" content="The IIST live demonstration connects Dynamic PUF, PQC, FIDO2, C2PA, and fail-closed AI policy.">
 </head>
 <body data-page="demo">
@@ -29,6 +29,11 @@
       <div class="chip-row" aria-label="Demo technologies"><span class="chip">Dynamic PUF</span><span class="chip">FIDO2</span><span class="chip">ML-DSA</span><span class="chip">ML-KEM</span><span class="chip">AES-GCM</span><span class="chip">C2PA</span></div>
     </section>
 
+    <figure class="scenario-figure scenario-figure-trusted">
+      <img src="../assets/soundlungs-trusted-path.png" alt="SoundLungs end-to-end trust coverage: separate viewer, operator, sensor, and processor identities are verified before encrypted audio with C2PA provenance reaches AI." width="1672" height="941">
+      <figcaption><strong>Full trust coverage</strong><span>The network is only the transport. User, action, endpoint, session, payload, and provenance evidence must all pass before inference.</span></figcaption>
+    </figure>
+
     <section class="screen-section">
       <div class="screen-section-head"><h2 data-i18n="demo.flowTitle">What happens</h2><p data-i18n="demo.flowIntro">Five short stages tell the complete story.</p></div>
       <div class="flow-list">
@@ -37,6 +42,43 @@
         <article class="flow-item"><span>03</span><div><strong data-i18n="demo.flow3Title">Create a fresh PQC session</strong><small data-i18n="demo.flow3Body">ML-KEM-768 establishes fresh Category 3 session material in addition to TLS.</small></div></article>
         <article class="flow-item"><span>04</span><div><strong data-i18n="demo.flow4Title">Protect and sign the recording</strong><small data-i18n="demo.flow4Body">AES-256-GCM protects the WAV in transit. The sensor binds a C2PA Content Credential to the exact file and session.</small></div></article>
         <article class="flow-item final"><span>05</span><div><strong data-i18n="demo.flow5Title">Unlock AI last</strong><small data-i18n="demo.flow5Body">The Jetson decrypts, validates the signer, bytes, sensor, and session, then allows inference.</small></div></article>
+      </div>
+    </section>
+
+    <section class="screen-section" aria-labelledby="boundaries-title">
+      <div class="screen-section-head"><h2 id="boundaries-title">Eight gates. One admission decision.</h2><p>Each control answers a different question; none substitutes for another.</p></div>
+      <div class="trust-grid">
+        <article><b>01</b><h3>Viewer identity</h3><p>FIDO2/WebAuthn passkey authentication grants view access.</p></article>
+        <article><b>02</b><h3>Operator action</h3><p>A separate hardware-backed, one-use proof authorizes Connect or Disconnect.</p></article>
+        <article><b>03</b><h3>TLS endpoint</h3><p>HTTPS validates the network endpoint and protects the connection.</p></article>
+        <article><b>04</b><h3>Edge devices</h3><p>Pinned UIDs and ML-DSA-65 transcript signatures identify both enrolled devices.</p></article>
+        <article><b>05</b><h3>Fresh session</h3><p>ML-KEM-768 establishes Category 3 session material in addition to TLS.</p></article>
+        <article><b>06</b><h3>Encrypted WAV</h3><p>Host AES-256-GCM provides efficient authenticated encryption for bulk audio.</p></article>
+        <article><b>07</b><h3>C2PA provenance</h3><p>The signer, exact bytes, trust chain, sensor, and live session binding are validated.</p></article>
+        <article class="trust-grid-final"><b>08</b><h3>AI admission</h3><p>Inference starts only after every required proof succeeds.</p></article>
+      </div>
+    </section>
+
+    <section class="screen-section" aria-labelledby="hardware-title">
+      <div class="screen-section-head"><h2 id="hardware-title">The hardware anchor behind the policy</h2><p>Images below are extracted directly from the IIST company brochure.</p></div>
+      <div class="brochure-grid">
+        <figure class="brochure-card brochure-card-wide"><img src="../assets/brochure-dynamic-puf-platform.png" alt="IIST Dynamic PUF hardware-backed trust-anchor platform diagram" width="1812" height="962"><figcaption>Dynamic PUF connects hardware-backed identity and protected operations to system-level applications.</figcaption></figure>
+        <figure class="brochure-card"><img src="../assets/brochure-sase-chip.jpeg" alt="IIST SASEA0046 secure chip on a fingertip" width="1816" height="2474"><figcaption>Secure IC</figcaption></figure>
+        <figure class="brochure-card"><img src="../assets/brochure-secure-module.jpeg" alt="IIST secure module circuit board" width="1837" height="2476"><figcaption>Deployable secure module</figcaption></figure>
+        <figure class="brochure-card brochure-card-wide compact"><img src="../assets/brochure-multiple-root-keys.png" alt="IIST Dynamic PUF diagram showing multiple independent root keys" width="1446" height="702"><figcaption>One physical source can support separate roots for system identity, secure boot, data encryption, and applications.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="screen-section danger-section" aria-labelledby="failure-title">
+      <div class="screen-section-head"><p class="failure-kicker">Failure scenario</p><h2 id="failure-title">What if the enrolled root of trust is missing?</h2><p>An encrypted channel can still carry untrusted input. Without pinned hardware identity and session-bound provenance, a substituted endpoint could replay or modify a recording and present false context.</p></div>
+      <figure class="scenario-figure scenario-figure-danger">
+        <img src="../assets/soundlungs-without-root-of-trust.png" alt="Failure scenario: a substituted endpoint replays or modifies a WAV when hardware identity and provenance evidence are absent; a secure design rejects the input and keeps AI locked." width="1672" height="941">
+        <figcaption><strong>Required response: fail closed</strong><span>Unknown device, missing proof, different UID, altered bytes, or invalid session binding means reject the recording and do not run AI.</span></figcaption>
+      </figure>
+      <div class="failure-facts">
+        <article><strong>Secure transport is not trusted input.</strong><span>TLS protects a connection; it does not by itself prove the physical sensor, exact recording, or session provenance.</span></article>
+        <article><strong>A valid different key is still wrong.</strong><span>The demo compares immutable identity and enrolled public material, so swapping working keys triggers the compromised state.</span></article>
+        <article><strong>C2PA is evidence, not truth.</strong><span>It makes configured provenance tamper-evident under policy; it does not determine whether audio content is factually true.</span></article>
       </div>
     </section>
 
